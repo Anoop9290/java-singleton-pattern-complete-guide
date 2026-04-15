@@ -31,5 +31,8 @@ bin/
 /nbdist/
 /.nb-gradle/
 
+### Maven ###
+target/
+
 ### Mac OS ###
 .DS_Store
