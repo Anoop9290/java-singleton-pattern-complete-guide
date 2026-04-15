@@ -5,6 +5,9 @@ out/
 .kotlin
 # IDE / tool configuration (XML)
 .idea/**/*.xml
+# IntelliJ workspace (user/machine-specific; safe to ignore explicitly)
+.idea/workspace.xml
+**/.idea/workspace.xml
 *.iml
 *.ipr
 *.iws
