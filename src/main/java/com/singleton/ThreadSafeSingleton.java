@@ -1,6 +1,9 @@
 package com.singleton;
 
-public class ThreadSafeSingleton {
+import java.io.Serial;
+import java.io.Serializable;
+
+public class ThreadSafeSingleton implements Serializable,Cloneable {
 
     private static volatile ThreadSafeSingleton INSTANCE = null;
 
@@ -15,6 +18,14 @@ public class ThreadSafeSingleton {
                 }
             }
         }
+        return INSTANCE;
+    }
+    @Override
+    public ThreadSafeSingleton clone() {
+        throw  new UnsupportedOperationException();
+    }
+    @Serial
+    protected Object readResolve(){
         return INSTANCE;
     }
 }
